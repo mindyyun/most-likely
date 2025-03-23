@@ -1,2 +1,2 @@
-FLASK_APP = most-likely
+FLASK_APP = most-likely/app.py
 FLASK_ENV = development

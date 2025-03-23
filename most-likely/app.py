@@ -5,7 +5,7 @@ from flask_pymongo import PyMongo
 app = Flask(__name__)
 
 # MongoDB configuration - change the URI to your MongoDB setup (local or Atlas)
-app.config['MONGO_URI'] = 'mongodb+srv://mindyyun:Lorenthia99<db_password>@cluster0.jev31.mongodb.net/mydb?retryWrites=true&w=majority&appName=Cluster0'
+app.config['MONGO_URI'] = 'mongodb+srv://mindyyun:most-likely@cluster0.jev31.mongodb.net/mydb?retryWrites=true&w=majority&appName=Cluster0'
 # For MongoDB Atlas, use the connection string provided by Atlas:
 # app.config["MONGO_URI"] = "mongodb+srv://<username>:<password>@cluster0.mongodb.net/mydatabase?retryWrites=true&w=majority"
 
@@ -23,26 +23,67 @@ def join():
 
 @app.route('/create')
 def create():
-    return render_template('create.html')
+    return render_template('step1.html')
 
 @app.route('/game')
 def game():
     return render_template('game.html')
 
-# Example: Insert data into MongoDB
-@app.route('/add', methods=['POST'])
-def add_document():
-    name = request.json.get('name')
-    age = request.json.get('age')
-
-    if not name or not age:
-        return jsonify({"error": "Name and Age are required!"}), 400
+# Adding names
+@app.route('/add_name', methods=['POST'])
+def add_name():
+    if "person" in request.form:
+        person_name = request.form["person"]
+        print(person_name)
+    else:
+        return jsonify({"error": "Please enter a name"}), 400
+    
+    if "person2" in request.form:
+        person_name2 = request.form["person2"]
+        print(person_name2)
+    else:
+        return jsonify({"error": "Please enter a name"}), 400
 
     # Insert document into the collection
-    document = {"name": name, "age": age}
+    document = {"p1_name": person_name, "p2_name": person_name2}
     mongo.db.users.insert_one(document)
 
-    return jsonify({"message": "User added successfully!"}), 201
+    return render_template('step2.html')
+
+@app.route('/add_question', methods=['POST'])
+def add_question():
+    if "q2" in request.form:
+        question = request.form["q1"]
+        print(question)
+    else:
+        return jsonify({"error": "Please enter a question"}), 400
+    
+    if "q2" in request.form:
+        question2 = request.form["q2"]
+        print(question2)
+    else:
+        return jsonify({"error": "Please enter a question"}), 400
+
+    # Insert document into the collection
+    document = {"q1": question, "q2": question2}
+    mongo.db.users.insert_one(document)
+
+    return render_template('step2.html')
+
+# Example: Insert data into MongoDB
+# @app.route('/add', methods=['POST'])
+# def add_document():
+#     name = request.json.get('name')
+#     age = request.json.get('age')
+
+#     if not name or not age:
+#         return jsonify({"error": "Name and Age are required!"}), 400
+
+#     # Insert document into the collection
+#     document = {"name": name, "age": age}
+#     mongo.db.users.insert_one(document)
+
+#     return jsonify({"message": "User added successfully!"}), 201
 
 # Example: Retrieve all users from MongoDB
 @app.route('/users', methods=['GET'])
