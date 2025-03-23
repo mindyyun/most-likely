@@ -17,17 +17,35 @@ h4{
   font-size: 40px;
   color: #5C63A4;
 }
-button{
-  background-color: #5C63A4;
-  color:#d8a150;
-  font-size: 50px;
-  padding:2em;
-  font-size: 20px;
-  margin-left:53em;
-  margin-bottom:4em;
-  
+
+.button-create{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding-bottom: 3em;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100vh; /* Takes full screen height */
+}
+.button-class {
+  background-color: #5C63A4;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 30px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  justify-content: center;
+  width:120px;
+}
 
 * {box-sizing:border-box}
 
@@ -45,7 +63,7 @@ button{
     width: 100%;
     justify-content: space-between;
     top: 200px;
-    background-color: aqua;
+
 }
 /* hide images by defauly */
 .themes{
