@@ -1,35 +1,54 @@
 
-const name1 = document.getElementById("name1")
-let name1_count = 0
+document.addEventListener("DOMContentLoaded", function () {
+    const name1 = document.getElementById("name1");
+    const name2 = document.getElementById("name2");
+    const name3 = document.getElementById("name3");
+    const name4 = document.getElementById("name4");
 
-name1.addEventListener("click", function() {
-    name1_count++;
-    console.log(name1_count)
-})
+    if (!name1 || !name2 || !name3 || !name4) {
+        console.error("One or more name elements not found!");
+        return;
+    }
 
-const name2 = document.getElementById("name2")
-let name2_count = 0
+    let playerOne = { name: name1.textContent.trim(), questions: [0, 0, 0, 0, 0] };
+    let playerTwo = { name: name2.textContent.trim(), questions: [0, 0, 0, 0, 0] };
+    let playerThree = { name: name3.textContent.trim(), questions: [0, 0, 0, 0, 0] };
+    let playerFour = { name: name4.textContent.trim(), questions: [0, 0, 0, 0, 0] };
 
-name2.addEventListener("click", function() {
-    name2_count++;
-    console.log(name2_count)
-})
+    name1.addEventListener("click", function () {
+        playerOne.questions[0]++;
+        console.log("Updated Player 1:", playerOne);
+        localStorage.setItem("player1", JSON.stringify(playerOne));
+    });
 
-const name3 = document.getElementById("name3")
-let name3_count = 0
+    name2.addEventListener("click", function () {
+        playerTwo.questions[0]++;
+        console.log("Updated Player 2:", playerTwo);
+        localStorage.setItem("player2", JSON.stringify(playerTwo));
+    });
 
-name3.addEventListener("click", function() {
-    name3_count++;
-    console.log(name3_count)
-})
+    name3.addEventListener("click", function () {
+        playerThree.questions[0]++;
+        console.log("Updated Player 3:", playerThree);
+        localStorage.setItem("player3", JSON.stringify(playerThree));
+    });
 
-const name4 = document.getElementById("name4")
-let name4_count = 0
+    name4.addEventListener("click", function () {
+        playerFour.questions[0]++;
+        console.log("Updated Player 4:", playerFour);
+        localStorage.setItem("player4", JSON.stringify(playerFour));
+    });
+});
 
-name4.addEventListener("click", function() {
-    name4_count++;
-    console.log(name4_count)
-})
+
+
+// players = [{ name: "min", questions: [1, 0, 0, 3]}, {name: "bob", upvotes: 0}]
+
+// player.questions[0] ++;
+
+
+// for player in players: player.questions 
+
 
 
 
