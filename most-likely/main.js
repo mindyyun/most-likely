@@ -1,3 +1,41 @@
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Function to handle next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Function to handle dot navigation
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+// Function to display slides
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("themes");
+  let dots = document.getElementsByClassName("dot");
+
+  if (slides.length === 0) {
+    console.error("One or more name elements not found!");
+    return;
+  }
+
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     const name1 = document.getElementById("name1");
