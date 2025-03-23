@@ -1,0 +1,24 @@
+body {
+    background-color: rgb(244, 237, 214)
+  }
+
+h1{
+    text-align: center;
+    font-size: 60px;
+    color: #5C63A4;
+}
+
+h3{
+    text-align: center;
+    font-size: 40px;
+    color: #5C63A4;
+}
+.names{
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    border-radius: 20px 20px 20px 20px;
+    padding-bottom: 3em;
+    padding-top: 3em;
+    background-color: #426b5a;
+}
