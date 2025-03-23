@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, render_template, request, redirect, url_for
-from flask_pymongo import PyMongo
+from flask import PyMongo
 
 # Create a Flask application
 app = Flask(__name__)
