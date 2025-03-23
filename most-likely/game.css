@@ -10,10 +10,15 @@ img{
     width: 1000px;
 
 }
-
 p {
-    text-align: center;
-    
+    position: fixed;  /* Keeps it fixed in one place */
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%); /* Ensures proper centering */
+    font-size: 20px;  /* Makes the text more readable */
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
 }
 
 .button-container1 {
