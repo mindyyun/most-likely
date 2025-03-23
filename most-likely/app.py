@@ -66,9 +66,9 @@ def add_question():
 
     # Insert document into the collection
     document = {"q1": question, "q2": question2}
-    mongo.db.users.insert_one(document)
+    mongo.db.questions.insert_one(document)
 
-    return render_template('step2.html')
+    return render_template('step3.html')
 
 # Example: Insert data into MongoDB
 # @app.route('/add', methods=['POST'])
