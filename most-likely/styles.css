@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(244, 237, 214)
+}
+
 .title{
   text-align: center;
   border: 5px solid #5C63A4;
@@ -10,8 +14,18 @@
 
 h4{
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
   color: #5C63A4;
+}
+button{
+  background-color: #5C63A4;
+  color:#d8a150;
+  font-size: 50px;
+  padding:2em;
+  font-size: 20px;
+  margin-left:53em;
+  margin-bottom:4em;
+  
 }
 
 
