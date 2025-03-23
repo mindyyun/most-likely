@@ -7,6 +7,15 @@
   margin: auto;
 }
 
+.arrows {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    justify-content: space-between;
+    top: 200px;
+    background-color: aqua;
+}
 /* hide images by defauly */
 .themes{
     display: none;
@@ -20,7 +29,7 @@
     width: auto;
     margin-top: -22px;
     padding: 16px;
-    color: white;
+    color: rgb(243, 234, 234);
     font-weight: bold;
     font-size: 18px;
     transition: 0.3s ease;
