@@ -1,5 +1,5 @@
 
-const name1 = document.getElementById("name")
+const name1 = document.getElementById("name1")
 let name1_count = 0
 
 name1.addEventListener("click", function() {
@@ -31,12 +31,5 @@ name4.addEventListener("click", function() {
     console.log(name4_count)
 })
 
-const name5 = document.getElementById("name5")
-let name5_count = 0
-
-name5.addEventListener("click", function() {
-    name5_count++;
-    console.log(name5_count)
-})
 
 
