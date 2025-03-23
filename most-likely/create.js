@@ -30,10 +30,27 @@ user_questions.addEventListener("click", function() {
     const name3 = document.getElementById("name3").value;
     const name4 = document.getElementById("name4").value;
     
-    localStorage.setItem("player1", name1);
-    localStorage.setItem("player2", name2);
-    localStorage.setItem("player3", name3);
-    localStorage.setItem("player4", name4);
+    let playerOne = new Map([
+        ["name", name1],
+        ["questions", [0,0,0,0,0]]
+    ])
+    let playerTwo = new Map([
+        ["name", name2],
+        ["questions", [0,0,0,0,0]]
+    ])
+    let playerThree = new Map([
+        ["name", name3],
+        ["questions", [0,0,0,0,0]]
+    ])
+    let playerFour = new Map([
+        ["name", name4],
+        ["questions", [0,0,0,0,0]]
+    ])
+
+    localStorage.setItem("player1", JSON.stringify(Array.from(playerOne)));
+    localStorage.setItem("player2", JSON.stringify(Array.from(playerTwo)));
+    localStorage.setItem("player3", JSON.stringify(Array.from(playerThree)));
+    localStorage.setItem("player4", JSON.stringify(Array.from(playerFour)));
 
     window.location.href = "game.html";
 })
