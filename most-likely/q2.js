@@ -18,10 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-const question1 = localStorage.getItem("question1")
-console.log("data from local storage",question1)
-const question1Display = document.getElementById("question1Display")
-question1Display.textContent = question1
-
-
-
+const question2 = localStorage.getItem("question2")
+console.log("data from local storage",question2)
+const question2Display = document.getElementById("question2Display")
+question2Display.textContent = question2
