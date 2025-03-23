@@ -13,3 +13,13 @@ name1.addEventListener("click", function() {
     name1_count++;
     console.log(name1_count)
 })
+
+const name2 = document.getElementById("name2")
+let name2_count = 0
+
+name2.addEventListener("click", function() {
+    name2_count++;
+    console.log(name2_count)
+})
+
+

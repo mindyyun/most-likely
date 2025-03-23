@@ -5,34 +5,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Creating a game</title>
         <link rel="stylesheet" href="styles.css" />
-        <script src = "main.js" defer></script>
+        <script src="create.js" defer></script>
     </head>
     <body>
         <h1>Create your own game</h1>
         <h3>Enter names</h3>
-        <form>
+        <form id="playerForm">
             <fieldset>
                 <label for="name"></label>
                 <input id="name" required>
                 <br/>
                 <label></label>
-                <input id="name" required>
+                <input id="name2" required>
                 <br/>
                 <button type="submit">Add player</button>
             </fieldset>
         </form>
         <h3>Enter questions</h3>
-        <form action="/add_question" method="POST">
+        <form id="questionForm">
             <fieldset>
                 <label for="question">Who's most likely to...</label>
-                <input id="question" name="q1" required>
+                <input id="question1" name="q1" required>
                 <br/>
                 <label for="question">Who's most likely to...</label>
-                <input id="question" name="q2" required>
+                <input id="question2" name="q2" required>
                 <br/>
-                <button type="submit">Next Step</button>
             </fieldset>
-            <button type="submit" href="game.html">Play Game</button>
+            <!-- Changed to a button with type="button" to prevent form submission -->
+            <button id="neovim"  type="button">Play Game</button>
         </form>
     </body>
 </html>
