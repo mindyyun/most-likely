@@ -5,36 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src = "q4.js" defer></script>
     <title>Document</title>
+    <link rel="stylesheet" href="game.css" />
 </head>
-<style>
-    /* Style the buttons to look like rectangles */
-    .button-container {
-        display: flex;  /* Align buttons in a row */
-        gap: 10px;      /* Space between buttons */
-    }
-    
-    .name-button {
-        padding: 10px 20px;  /* Rectangle shape with padding */
-        border: 2px solid #007BFF;
-        background-color: #f0f0f0;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
 
-    .name-button:hover {
-        background-color: #007BFF;
-        color: white;
-    }
-</style>
 <body>
+    <img src="./candy-blank.png" width="700" height="500" >
     <p id="question4Display"></p>
-    <div class="button-container">
+    <div class="button-container1">
         <button class="name-button" data-value="1" id = "name1"></button>
         <button class="name-button" data-value="2" id="name2"></button>
+    </div>
+    <div class="button-container2">
         <button class="name-button" data-value="3" id="name3"></button>
         <button class="name-button" data-value="4" id="name4"></button>
     </div>
-    <a type="button" href="q5.html">Next</button>
+    <div class = "button-create">
+        <a href="q5.html" class="button-class"> Next! </a>
+    </div>
 </body>
 </html>
