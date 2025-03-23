@@ -6,8 +6,35 @@
     <script src = "game.js" defer></script>
     <title>Document</title>
 </head>
+<style>
+    /* Style the buttons to look like rectangles */
+    .button-container {
+        display: flex;  /* Align buttons in a row */
+        gap: 10px;      /* Space between buttons */
+    }
+    
+    .name-button {
+        padding: 10px 20px;  /* Rectangle shape with padding */
+        border: 2px solid #007BFF;
+        background-color: #f0f0f0;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .name-button:hover {
+        background-color: #007BFF;
+        color: white;
+    }
+</style>
 <body>
     <p id="question1Display"></p>
-    
+    <div class="button-container">
+        <button class="name-button" data-value="1" id = "name1"></button>
+        <button class="name-button" data-value="2">Button 2</button>
+        <button class="name-button" data-value="3">Button 3</button>
+        <button class="name-button" data-value="4">Button 4</button>
+    </div>
+    <input type="submit">
 </body>
 </html>
